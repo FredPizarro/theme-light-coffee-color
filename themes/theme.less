@@ -1,0 +1,246 @@
+// COLOR PALETTE
+@background: #F5F5F5;
+@foreground: #bdbdbd;
+/* BLUES */
+
+/* light*/           /*Dark*/
+@c_piel_yellow_0: #f1fa8c; @c_piel_yellow_1: #E6DB74; @c_piel_yellow_2: #cddc39;@c_piel_yellow_3: #cddc39; @c_piel_yellow_4: #ffff00;
+@c_pulpa_0: #ffcc80; @c_pulpa_1: #ffe082;
+@c_hojas_0: #50fa7b; @c_hojas_1: #1de9b6; @c_hojas_2: #00c853; @c_hojas_3: #10AB76;
+@c_nubes_0: #80d8ff; @c_nubes_1: #42a5f5; @c_nubes_2: #00b0ff;
+@c_nada_0: #EEEEEE;  @c_nada_1: #d7ccc8;
+@c_piel_orange_0: #ff7043;
+
+/* Color Material */
+@blueGrey-900: #263238;
+@indigo-900: #1a237e;
+@lightGreen-900: #33691e;
+@grey-100: #f5f5f5;
+@grey-200: #eeeeee;
+@grey-400: #bdbdbd;
+@grey-500: #9e9e9e;
+@grey-600: #757575;
+@grey-700:#616161;
+@grey-800: #424242;
+@red-500: #f44336;
+
+/* ACCENTS */
+@yellow-A200: #FFFF8D;
+@red-A400: #ff1744;
+@blue-A400: #2979ff;
+@lightGreen-A400: #76ff03;
+
+@green-500: #4caf50;
+@deepOrange-400: #ff7043;
+@deepOrange-300: #ff8a65;
+
+/*
+
+********************************************
+********************************************
+
+*/
+
+// STYLING
+
+/* Editor area */
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @lightGreen-900;
+    
+}
+
+#editor-holder .CodeMirror,
+#editor-holder .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.cm-m-css.cm-tag {
+    color: @deepOrange-400;
+}
+
+/* highlight for the active line (View > Highlight Active Line) */
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: @red-A400;
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #000;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: rgba(0, 0, 0, 0.2); color: #fff;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: @grey-800;
+    }
+}
+ 
+/************************************ atributos  *************************************/
+.cm-atom,
+.cm-string,
+.cm-string-2,
+.cm-hr {
+    color: @deepOrange-300;
+}
+/*_____________________________________________________________________________*/
+.cm-attribute,
+.cm-plus {
+    color: @deepOrange-400;
+}
+
+.cm-number {
+    color: @grey-200;
+}
+
+.cm-def,
+.cm-property {
+    color: @deepOrange-400;
+}
+
+.cm-variable,
+.cm-operator,
+.cm-meta,
+.cm-bracket {
+    color: @grey-500;
+}
+
+.cm-variable-2 { color: @grey-600;}
+.cm-variable-3 { color: @grey-400;}
+
+// VARIABLE COLORS FOR PHP
+.cm-m-clike.cm-variable { color: @grey-400;}
+.cm-m-clike.cm-variable-2 { color: @deepOrange-400;}
+.cm-m-clike.cm-operator { color: @grey-500;}
+.cm-comment { color: @grey-800;}
+.cm-error,
+.cm-minus { color: @grey-200;
+}
+.cm-header { color: #d85896;}
+.cm-link { color: #b77fdb;
+    text-decoration: none;
+}
+.cm-rangeinfo { color: #6c71c4;}
+
+.cm-keyword,
+.cm-qualifier,
+.cm-builtin,
+.cm-tag,
+.cm-quote { color: @green-500;
+}
+
+
+
+// EXTRA CSS 
+.CodeMirror-searching {
+    background-color: @lightGreen-900;
+    &.searching-current-match {
+        background-color: @green-500;
+    }
+}
+.CodeMirror-cursor {
+    border-left: 1px solid #fff !important;
+}
+.CodeMirror-gutters {
+    background-color: @background;
+    border-right: none;
+}
+
+/***** numeración de cada linea ******/
+.CodeMirror-linenumber { color: @grey-700;}
+/*_____________________________________________________________________*/
+
+.CodeMirror .CodeMirror-selected {
+    background: @deepOrange-400;
+}
+
+/***** seleccion de texto ******/
+
+.CodeMirror-focused .CodeMirror-selected {
+    background: @grey-800;
+    border-bottom-left-radius: 3px;
+}
+/*______________________________________________________________________*/
+
+
+/*****  seleccion de corchetes ******/
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag {
+    background-color: transparent;
+    border-bottom: 2px solid @lightGreen-A400;
+    color: @green-500;
+}
+/*______________________________________________________________________*/
+
+.CodeMirror-matchingbracket {
+    color: @green-500!important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid #fff;
+}
+
+.CodeMirror {
+    .CodeMirror {
+        background: transparent;
+    }
+    .CodeMirror .CodeMirror-gutters {
+        background: transparent;
+        border-right: none;
+    }
+    .CodeMirror .CodeMirror-activeline-background {
+        background: transparent;
+    }
+    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+        background: transparent;
+        color: @grey-800;
+    }
+    .CodeMirror-focused .CodeMirror-activeline-background {
+        background: @indigo-900;
+    }
+    .CodeMirror-focused .CodeMirror-activeline {
+        .CodeMirror-gutter-elt {
+            background: rgba(0, 0, 0, 0.2);
+            color: @grey-400;
+        }
+    }
+}
+
+.CodeMirror-foldgutter-open:after {
+    color: @grey-800;
+}
+
+.CodeMirror-foldgutter-folded:after {
+    color: @deepOrange-400;
+}
+
+.CodeMirror.over-gutter,
+.CodeMirror-activeline {
+    .CodeMirror-foldgutter-open:after {
+        color: @grey-800;
+    }
+}
+
+.CodeMirror-foldmarker {
+    border-color: @foreground;
+    color: @grey-500;
+    background-color: @background;
+    padding: 0 5px;
+}
+
+// NON-EDITOR STYLING
+.image-view,
+.not-editor { 
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: @grey-500;
+}
+
+.quick-view-highlight {
+    background: @blueGrey-900;
+}
