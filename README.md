@@ -8,7 +8,7 @@ You can author your README using Brackets.io.
 Clone a copy of the repo:
 
 ```
-git clone https://github.com/FredPizarro/theme-dark-coffee-color.git
+git clone https://github.com/FredPizarro/theme-light-coffee-color.git
 ```
 
 in you location `Brackets/extensions/user` under your user directory.
