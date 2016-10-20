@@ -1,7 +1,7 @@
 
 =======
 # README
-## This is the README for your extension "theme-color-coffee"
+## This is the README for your extension "Material Color"
 You can author your README using Brackets.io.
 
 ## Manual mode
