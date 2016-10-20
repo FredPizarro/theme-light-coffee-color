@@ -1,9 +1,9 @@
 {
     "name": "theme-light-coffee-color",
     "title": "Coffee Color light",
-    "description": "Inspirate in the product coffee !!.. + Sun",
+    "description": "Inspirate in Material Color",
     "homepage": "https://github.com/FredPizarro/theme-light-coffee-color",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Fred Pizarro <freddy_ps_3@hotmail.com> (https://github.com/FredPizarro/)",
     "license": "MIT",
     "engines": {
