@@ -1,9 +1,9 @@
 {
     "name": "theme-light-coffee-color",
     "title": "Material Color (light)",
-    "description": "Inspirate in Material Color",
+    "description": "Inspirate in Material Color and coffee color",
     "homepage": "https://github.com/FredPizarro/theme-light-coffee-color",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "Fred Pizarro <freddy_ps_3@hotmail.com> (https://github.com/FredPizarro/)",
     "license": "MIT",
     "engines": {
@@ -14,5 +14,5 @@
         "dark": false,
         "addModeClass": true
     },
-    "keywords": ["Coffee Theme", "Fred Theme", "theme", "flat", "light", "highlighting", "syntax"]
+    "keywords": ["Material", "Fred Theme", "theme", "material color", "light", "highlighting", "syntax"]
 }

@@ -3,14 +3,6 @@
 @foreground: #bdbdbd;
 /* BLUES */
 
-/* light*/           /*Dark*/
-@c_piel_yellow_0: #f1fa8c; @c_piel_yellow_1: #E6DB74;
-@c_piel_yellow_2: #cddc39;@c_piel_yellow_3: #cddc39; @c_piel_yellow_4: #ffff00;
-@c_pulpa_0: #ffcc80; @c_pulpa_1: #ffe082;
-@c_hojas_0: #50fa7b; @c_hojas_1: #1de9b6; @c_hojas_2: #00c853; @c_hojas_3: #10AB76;
-@c_nubes_0: #80d8ff; @c_nubes_1: #42a5f5; @c_nubes_2: #00b0ff;
-@c_nada_1: #d7ccc8;
-@c_piel_orange_0: #ff7043;
 
 /* Color Material */
 @blueGrey-900: #263238;
@@ -46,13 +38,12 @@
 @deepOrange-700: #e64a19;
 @deepOrange-800: #d84315;
 @white: #ffffff;
+@black: #000000;
 
 /*
-
 ********************************************
 @import url('https://fonts.googleapis.com/css?family=Roboto:900');
 ********************************************
-
 */
 
 // STYLING
@@ -90,7 +81,7 @@
     }
 }
  
-/** atributos  *************************************/
+/** atributos  **/
 .cm-atom,
 .cm-string,
 .cm-string-2,
@@ -104,22 +95,18 @@
     text-shadow: 0.1px 0.1px @deepOrange-50;
 }
 
-/* css ****************************************************************************/
-//.cm-keyword
-.cm-strong         { color: aqua; }
-.cm-em             { color: aqua; }
-//.cm-plus
-//.cm-number
+.cm-strong { color: @yellow-500; }
+.cm-em { color: @yellow-500; }
 
 /* (numeros, mediadas) */
 .cm-number {
     color: @grey-900; font-family: 'Roboto', sans-serif;
 }
 
+/* css properties color: etc */
 .cm-def,
 .cm-property {
-    color: @deepOrange-800;
-    // css properties color: etc
+    color: @deepOrange-800; 
 }
 
 
@@ -133,12 +120,10 @@
 .cm-variable-2 { color: @grey-600;}
 .cm-variable-3 { color: @grey-400;}
 
-.cm-comment {
-    /* comentario // /* */ **********************************/
-    color: @grey-500;
-}
+ /* comentario // **/
+.cm-comment { color: @grey-500; }
 
-// various
+/* various **/
 .cm-header { color: @purple-300;}
 .cm-link {
     color: @yellow-500;
@@ -155,11 +140,9 @@
 .cm-qualifier,
 .cm-builtin,
 .cm-tag,
-.cm-quote { color: @red-A400;
+.cm-quote {
+    color: @teal-600;
 }
-
-
-
 
 
 // EXTRA CSS 
@@ -177,16 +160,16 @@
     border-right: none;
 }
 
-.CodeMirror-linenumber { color: @grey-700; /***** numeración de cada linea ******/}
-/*_____________________________________________________________________*/
+ /***** numeración de cada linea ******/
+.CodeMirror-linenumber { color: @grey-700; }
 
+/* Selección de texto 1 o más / off **/
 .CodeMirror .CodeMirror-selected {
-    background: @deepOrange-800;
+    background: @yellow-500;
 }
 
-
+/***** seleccion de texto / on **/
 .CodeMirror-focused .CodeMirror-selected {
-    /***** seleccion de texto ***************************************************/
     background: @grey-800;
     border-bottom-left-radius: 3px;
 }
@@ -198,16 +181,16 @@
     border-left: 2px solid @red-A400;
 }
 
+/*****  seleccion de corchetes ***************************************/
 .CodeMirror-matchingbracket,
 .CodeMirror-matchingtag {
-    /*****  seleccion de corchetes ***************************************/
     background-color: transparent;
     border-bottom: 2px solid @red-A400;
     color: @green-500;
 }
 
+/***** corchetes en seleccion ***************************************/
 .CodeMirror-matchingbracket {
-    /***** corchetes en seleccion ***************************************/
     color: @Grey-200!important; padding-left: 7px; padding-right: 7px;
     font-size: 20px;
     background: @red-A400; border-radius: 50%;
@@ -266,7 +249,7 @@
     padding: 0 5px;
 }
 
-// NON-EDITOR STYLING
+/* NON-EDITOR STYLING */
 .image-view,
 .not-editor { 
     background-color: @background;
@@ -276,10 +259,9 @@
     color: @grey-500;
 }
 
-
 /*.cm-m-css: CSS, LESS *****************************************************************/
 .cm-m-css.cm-tag {
-    color: @deepOrange-800;
+    color: @lightGreen-A400;
 }
 .cm-matchhighlight    { border-bottom-color: @red-A400; }
 .quick-view-highlight {
@@ -292,4 +274,3 @@
 .cm-m-clike.cm-variable { color: @grey-400;}
 .cm-m-clike.cm-variable-2 { color: @deepOrange-800;}
 .cm-m-clike.cm-operator { color: @grey-500;}
-
