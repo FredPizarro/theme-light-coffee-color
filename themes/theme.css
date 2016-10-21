@@ -4,12 +4,15 @@
 /* ACCENTS */
 /*
 ********************************************
-@import url('https://fonts.googleapis.com/css?family=Roboto:900');
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:100i,300i,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i');
+/*
 ********************************************
 */
+/* Editor area **************************************************************/
 .CodeMirror,
 .CodeMirror-scroll {
-  /* Editor area **************************************************************/
   background-color: #f5f5f5;
   color: #33691e;
 }
@@ -23,6 +26,11 @@
   text-shadow: 0.1px 0.1px #e0f2f1;
   /* <> & </> ***********************************/
 }
+/* highlight for the active line (View > Highlight Active Line) (linea de seleccion) */
+.CodeMirror-focused .CodeMirror-activeline-background {
+  background: #ffebee;
+  border-left: 2px solid #ff1744;
+}
 .show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
   box-shadow: inset 15px 0 0 0 #000;
 }
@@ -33,7 +41,12 @@
 .CodeMirror-focused .CodeMirror-activeline .inline-widget .CodeMirror-gutter-elt {
   color: #424242;
 }
-/** atributos  **/
+/** atributos  *
+*(number: numeros, mediadas)
+*(def,property: css properties color: etc)
+*(comentario )
+** various
+*/
 .cm-atom,
 .cm-string,
 .cm-string-2,
@@ -51,12 +64,10 @@
 .cm-em {
   color: #ffeb3b;
 }
-/* (numeros, mediadas) */
 .cm-number {
   color: #212121;
   font-family: 'Roboto', sans-serif;
 }
-/* css properties color: etc */
 .cm-def,
 .cm-property {
   color: #d84315;
@@ -73,11 +84,11 @@
 .cm-variable-3 {
   color: #bdbdbd;
 }
-/* comentario // **/
 .cm-comment {
   color: #9e9e9e;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
 }
-/* various **/
 .cm-header {
   color: #ba68c8;
 }
@@ -99,14 +110,35 @@
 .cm-quote {
   color: #00897b;
 }
+/*
+* extra css
+* CodeMirror-searching : busqueda ( desactivado & activado )
+*CodeMirror-cursor: cursorM 
+*/
 .CodeMirror-searching {
-  background-color: #ffeb3b;
+  font-size: 1.1rem;
+  background: #eeeeee;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 50%;
+  transition: .3s;
+  position: relative;
+  padding-left: 0.5rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  padding-right: 0.5rem;
+  /* x4 palabras */
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .CodeMirror-searching.searching-current-match {
-  background-color: #4caf50;
+  background-color: #f44336;
+  color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 3px 0;
 }
 .CodeMirror-cursor {
-  border-left: 1px solid #000 !important;
+  border-left: 2px solid #f44336 !important;
 }
 .CodeMirror-gutters {
   background-color: #f5f5f5;
@@ -124,11 +156,6 @@
 .CodeMirror-focused .CodeMirror-selected {
   background: #424242;
   border-bottom-left-radius: 3px;
-}
-/* highlight for the active line (View > Highlight Active Line) (linea de seleccion) */
-.CodeMirror-focused .CodeMirror-activeline-background {
-  background: #ffebee;
-  border-left: 2px solid #ff1744;
 }
 /*****  seleccion de corchetes ***************************************/
 .CodeMirror-matchingbracket,
