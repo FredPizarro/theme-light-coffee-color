@@ -44,11 +44,12 @@
 /*
 ********************************************
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto:100i,300i,400');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800');
+
 /*
 ********************************************
 */
+
 
 // STYLING
 /* Editor area **************************************************************/
@@ -110,7 +111,9 @@
 .cm-link { color: @yellow-500; text-decoration: none; }
 .cm-error, .cm-minus { color: @red-A400; }
 .cm-rangeinfo { color: @deepPurple-400;}
-.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote { color: @teal-600; }
+.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {
+    color: @teal-600;
+}
 
 
 
@@ -118,6 +121,8 @@
 * extra css
 * CodeMirror-searching : busqueda ( desactivado & activado )
 *CodeMirror-cursor: cursorM 
+*CodeMirror-cursor: barra number
+*CodeMirror-linenumber: numeración de cada linea (Gutter line number)
 */
 .CodeMirror-searching {
     font-size: 1.1rem; background: @grey-200;
@@ -141,9 +146,8 @@
     background-color: @grey-200;
     border-right: none;
 }
+.CodeMirror-linenumber { color: @grey-500; font-family: 'Open Sans', sans-serif; }
 
- /***** numeración de cada linea ******/
-.CodeMirror-linenumber { color: @grey-700; }
 
 /* Selección de texto 1 o más / off **/
 .CodeMirror .CodeMirror-selected {
@@ -204,13 +208,17 @@
     }
 }
 
+/*
+* CodeMirror-foldgutter-open:after : agrupar en icon |> off
+*CodeMirror-foldgutter-folded:after : |> on
+*/
 .CodeMirror-foldgutter-open:after {
     color: @grey-800;
 }
-
 .CodeMirror-foldgutter-folded:after {
-    color: @deepOrange-800;
+    color: @red-500;
 }
+
 
 .CodeMirror.over-gutter,
 .CodeMirror-activeline {
@@ -220,6 +228,7 @@
 }
 
 .CodeMirror-foldmarker {
+    display: inline-block;
     border-color: @foreground;
     color: @grey-500;
     background-color: @background;
@@ -243,6 +252,13 @@
 .cm-matchhighlight    { border-bottom-color: @red-A400; }
 .quick-view-highlight {
     background: @blueGrey-900;
+}
+.ico-cssColorPreview {
+  display: block;
+  width: 0.5em;
+  height: 1.25em;
+  margin: 0;
+  border: 0;
 }
 
 /*.cm-m-javascript: JavaScript *********************************************************/

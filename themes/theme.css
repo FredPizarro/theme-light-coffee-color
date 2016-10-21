@@ -5,8 +5,7 @@
 /*
 ********************************************
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto:100i,300i,400');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800');
 /*
 ********************************************
 */
@@ -114,6 +113,8 @@
 * extra css
 * CodeMirror-searching : busqueda ( desactivado & activado )
 *CodeMirror-cursor: cursorM 
+*CodeMirror-cursor: barra number
+*CodeMirror-linenumber: numeración de cada linea (Gutter line number)
 */
 .CodeMirror-searching {
   font-size: 1.1rem;
@@ -144,9 +145,9 @@
   background-color: #eeeeee;
   border-right: none;
 }
-/***** numeración de cada linea ******/
 .CodeMirror-linenumber {
-  color: #616161;
+  color: #9e9e9e;
+  font-family: 'Open Sans', sans-serif;
 }
 /* Selección de texto 1 o más / off **/
 .CodeMirror .CodeMirror-selected {
@@ -198,17 +199,22 @@
   background: rgba(0, 0, 0, 0.2);
   color: #bdbdbd;
 }
+/*
+* CodeMirror-foldgutter-open:after : agrupar en icon |> off
+*CodeMirror-foldgutter-folded:after : |> on
+*/
 .CodeMirror-foldgutter-open:after {
   color: #424242;
 }
 .CodeMirror-foldgutter-folded:after {
-  color: #d84315;
+  color: #f44336;
 }
 .CodeMirror.over-gutter .CodeMirror-foldgutter-open:after,
 .CodeMirror-activeline .CodeMirror-foldgutter-open:after {
   color: #424242;
 }
 .CodeMirror-foldmarker {
+  display: inline-block;
   border-color: #bdbdbd;
   color: #9e9e9e;
   background-color: #f5f5f5;
@@ -231,6 +237,13 @@
 }
 .quick-view-highlight {
   background: #263238;
+}
+.ico-cssColorPreview {
+  display: block;
+  width: 0.5em;
+  height: 1.25em;
+  margin: 0;
+  border: 0;
 }
 /*.cm-m-javascript: JavaScript *********************************************************/
 /*.cm-m-clike: PHP *********************************************************************/
