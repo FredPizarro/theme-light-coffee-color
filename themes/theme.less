@@ -20,6 +20,7 @@
 
 /* ACCENTS */
 @yellow-A200: #FFFF8D;
+@red-A200: #ff5252;
 @red-A400: #ff1744;
 @blue-A400: #2979ff;
 @lightGreen-A400: #76ff03;
@@ -106,7 +107,9 @@
 .cm-variable, .cm-operator, .cm-meta, .cm-bracket { color: @grey-500; }
 .cm-variable-2 { color: @grey-600;}
 .cm-variable-3 { color: @grey-400;}
-.cm-comment { color: @grey-500;font-family: 'Open Sans', sans-serif; font-style: italic; }
+.cm-comment { color: @grey-500;font-family: 'Open Sans', sans-serif; font-style: italic;
+    
+}
 .cm-header { color: @purple-300;}
 .cm-link { color: @yellow-500; text-decoration: none; }
 .cm-error, .cm-minus { color: @red-A400; }
@@ -159,6 +162,10 @@
     background: @grey-800;
     border-bottom-left-radius: 3px;
 }
+.CodeMirror-focused .CodeMirror-selected{
+    background: @grey-800;
+    border-bottom-left-radius: 3px;
+}
 
 
 
@@ -175,6 +182,8 @@
     color: @grey-200!important; padding-left: 7px; padding-right: 7px;
     font-size: 20px;
     background: @red-A400; border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        
 }
 
 .CodeMirror-overwrite .CodeMirror-cursor {
@@ -214,32 +223,40 @@
 */
 .CodeMirror-foldgutter-open:after {
     color: @grey-800;
+    
 }
 .CodeMirror-foldgutter-folded:after {
-    color: @red-500;
+    padding-left: 5px; padding-right: 5px;
+    border: 1px solid @yellow-500; border-radius: 50%;
+    background-color: @yellow-500;
+    color: @black;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
+    transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 
 .CodeMirror.over-gutter,
 .CodeMirror-activeline {
     .CodeMirror-foldgutter-open:after {
-        color: @grey-800;
+        color: @grey-600;
     }
 }
 
 .CodeMirror-foldmarker {
     display: inline-block;
     border-color: @foreground;
-    color: @grey-500;
+    color: @grey-500!important;
     background-color: @background;
     padding: 0 5px;
 }
 
+
 /* NON-EDITOR STYLING */
 .image-view,
-.not-editor { 
+.not-editor {
     background-color: @background;
 }
+
 
 .view-pane .image-view {
     color: @grey-500;
@@ -260,6 +277,8 @@
   margin: 0;
   border: 0;
 }
+
+
 
 /*.cm-m-javascript: JavaScript *********************************************************/
 

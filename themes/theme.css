@@ -158,6 +158,10 @@
   background: #424242;
   border-bottom-left-radius: 3px;
 }
+.CodeMirror-focused .CodeMirror-selected {
+  background: #424242;
+  border-bottom-left-radius: 3px;
+}
 /*****  seleccion de corchetes ***************************************/
 .CodeMirror-matchingbracket,
 .CodeMirror-matchingtag {
@@ -173,6 +177,7 @@
   font-size: 20px;
   background: #ff1744;
   border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .CodeMirror-overwrite .CodeMirror-cursor {
   border-left: none !important;
@@ -207,16 +212,23 @@
   color: #424242;
 }
 .CodeMirror-foldgutter-folded:after {
-  color: #f44336;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #ffeb3b;
+  border-radius: 50%;
+  background-color: #ffeb3b;
+  color: #000000;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .CodeMirror.over-gutter .CodeMirror-foldgutter-open:after,
 .CodeMirror-activeline .CodeMirror-foldgutter-open:after {
-  color: #424242;
+  color: #757575;
 }
 .CodeMirror-foldmarker {
   display: inline-block;
   border-color: #bdbdbd;
-  color: #9e9e9e;
+  color: #9e9e9e !important;
   background-color: #f5f5f5;
   padding: 0 5px;
 }
