@@ -66,6 +66,14 @@
 .cm-number {
   color: #212121;
   font-family: 'Roboto', sans-serif;
+  text-shadow: 0 0 1px #ffffff,
+            0 0 2px #ffffff,
+            0 0 3px #ffffff,
+            0 0 4px #fff,
+            0 0 7px #fff,
+            0 0 8px #fff,
+            0 0 10px #fff,
+            0 0 75px #fff;
 }
 .cm-def,
 .cm-property {
@@ -155,11 +163,7 @@
 }
 /***** seleccion de texto / on **/
 .CodeMirror-focused .CodeMirror-selected {
-  background: #424242;
-  border-bottom-left-radius: 3px;
-}
-.CodeMirror-focused .CodeMirror-selected {
-  background: #424242;
+  background: #212121;
   border-bottom-left-radius: 3px;
 }
 /*****  seleccion de corchetes ***************************************/

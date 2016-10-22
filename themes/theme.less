@@ -8,13 +8,13 @@
 @blueGrey-900: #263238;
 @indigo-900: #1a237e;
 @lightGreen-900: #33691e;
-@grey-900: #212121;
 @grey-200: #EEEEEE;
 @grey-400: #bdbdbd;
 @grey-500: #9e9e9e;
 @grey-600: #757575;
 @grey-700:#616161;
 @grey-800: #424242;
+@grey-900: #212121;
 @red-500: #f44336;
 @red-50:#ffebee;
 
@@ -102,7 +102,19 @@
 .cm-attribute, .cm-plus { color: @deepOrange-700;text-shadow: 0.1px 0.1px @deepOrange-50;}
 .cm-strong { color: @yellow-500; }
 .cm-em { color: @yellow-500; }
-.cm-number { color: @grey-900; font-family: 'Roboto', sans-serif; }
+.cm-number {
+    color: @grey-900;
+    font-family: 'Roboto', sans-serif;
+    text-shadow:
+            0 0 1px #ffffff,
+            0 0 2px #ffffff,
+            0 0 3px #ffffff,
+            0 0 4px #fff,
+            0 0 7px #fff,
+            0 0 8px #fff,
+            0 0 10px #fff,
+            0 0 75px #fff;
+}
 .cm-def, .cm-property { color: @deepOrange-800; }
 .cm-variable, .cm-operator, .cm-meta, .cm-bracket { color: @grey-500; }
 .cm-variable-2 { color: @grey-600;}
@@ -158,12 +170,8 @@
 }
 
 /***** seleccion de texto / on **/
-.CodeMirror-focused .CodeMirror-selected {
-    background: @grey-800;
-    border-bottom-left-radius: 3px;
-}
 .CodeMirror-focused .CodeMirror-selected{
-    background: @grey-800;
+    background: @grey-900;
     border-bottom-left-radius: 3px;
 }
 
