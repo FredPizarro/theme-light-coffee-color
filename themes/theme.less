@@ -42,6 +42,9 @@
 @white: #ffffff;
 @black: #000000;
 
+@txt-shadown: 0 0 1px rgba(255, 255, 255, 0.5);
+@txt-shadown-c: 0 0 0.1px rgba(255, 255, 255, 0.5);
+
 /*
 ********************************************
 */
@@ -56,8 +59,9 @@
 /* Editor area **************************************************************/
 .CodeMirror, .CodeMirror-scroll {
     background-color:  @background;
-    color: @lightGreen-900;
+    color: @grey-800; text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
 }
+
 
 
 #editor-holder .CodeMirror,
@@ -68,7 +72,7 @@
 
 .cm-tag.cm-bracket {
     color: @teal-600;
-    text-shadow: 0.1px 0.1px @teal-50;
+    text-shadow: @txt-shadown-c;
     /* <> & </> ***********************************/ 
 }
 
@@ -98,8 +102,8 @@
 *(comentario )
 ** various
 */
-.cm-atom, .cm-string, .cm-string-2, .cm-hr { color: @deepOrange-500; }
-.cm-attribute, .cm-plus { color: @deepOrange-700;text-shadow: 0.1px 0.1px @deepOrange-50;}
+.cm-atom, .cm-string, .cm-string-2, .cm-hr { color: @deepOrange-500; text-shadow: @txt-shadown;}
+.cm-attribute, .cm-plus { color: @deepOrange-700;text-shadow: @txt-shadown;}
 .cm-strong { color: @yellow-500; }
 .cm-em { color: @yellow-500; }
 .cm-number {
@@ -128,6 +132,7 @@
 .cm-rangeinfo { color: @deepPurple-400;}
 .cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {
     color: @teal-600;
+    text-shadow: @txt-shadown;
 }
 
 
