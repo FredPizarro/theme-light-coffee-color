@@ -219,7 +219,7 @@
   color: #424242;
 }
 .CodeMirror-foldgutter-folded:after {
-  padding-left: 5px;
+  padding-left: 7px;
   padding-right: 5px;
   border: 1px solid #ffeb3b;
   border-radius: 50%;
