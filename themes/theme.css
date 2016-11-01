@@ -305,6 +305,63 @@
   margin: 0;
   border: 0;
 }
+/*
+Tabs
+*Tab Selected
+*/
+.ext-documents {
+  padding: 0 2px;
+  background: #eeeeee;
+}
+.ext-documents .document {
+  margin: 0px;
+  padding: 3px 2em 3px 12px;
+  background: #eeeeee;
+  color: #bdbdbd;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  border-radius: 0px;
+  border-bottom: 5px solid red;
+  transition: none;
+  opacity: 1;
+  overflow: hidden;
+}
+.ext-documents .document:hover {
+  transition: none;
+  border-bottom: 5px solid #ffd600;
+}
+.ext-documents .document.selected {
+  color: #616161;
+  background: #ffeb3b;
+  transition: none;
+}
+.ext-documents .document.changed {
+  box-shadow: none;
+  background: #ff5252;
+  color: #eeeeee;
+  transition: none;
+}
+.ext-documents .document-close {
+  color: #111;
+  transition: none;
+  cursor: pointer;
+  opacity: 1;
+  line-height: 1.5;
+  text-align: center;
+}
+.ext-documents .document.selected .document-close {
+  color: #75daff;
+}
+.ext-documents .document.changed .document-close {
+  color: #fff;
+}
+.ext-documents .document-close:hover,
+.ext-documents .button-icon:hover {
+  color: #555;
+  opacity: 1;
+  transition: none;
+}
 /*.cm-m-javascript: JavaScript *********************************************************/
 /*.cm-m-clike: PHP *********************************************************************/
 .cm-m-clike.cm-variable {
