@@ -3,7 +3,8 @@
 /* Color Material */
 /* ACCENTS */
 /*
-********************************************
+* C:\Program Files (x86)\Brackets\www\thirdparty\CodeMirror  
+* C:\Program Files (x86)\Brackets\www\thirdparty\CodeMirror\lib
 */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @font-face {
@@ -48,7 +49,7 @@
 /*
 ********************************************
 */
-/* Editor area **************************************************************/
+/* Editor area **/
 .CodeMirror,
 .CodeMirror-scroll {
   font-size: 14px;
@@ -56,6 +57,20 @@
   background-color: #f5f5f5;
   color: #424242;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+}
+/* PADDING */
+.CodeMirror-lines {
+  padding: 12px 0;
+  /* Vertical padding around (content) */
+}
+.CodeMirror pre {
+  color: #424242;
+  /* {, : , ; */
+}
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+  background-color: #e0e0e0;
+  /* The little square between H and V scrollbars */
 }
 #editor-holder .CodeMirror,
 #editor-holder .CodeMirror-scroll {
@@ -75,9 +90,13 @@
 .show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
   box-shadow: inset 15px 0 0 0 #000;
 }
+/* Seleccion linea (numeros) */
 .CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
-  background: rgba(0, 0, 0, 0.2);
-  color: #000;
+  background: #ffcdd2;
+  color: #616161;
+  font-family: 'Roboto Black', sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
 }
 .CodeMirror-focused .CodeMirror-activeline .inline-widget .CodeMirror-gutter-elt {
   color: #424242;
@@ -193,6 +212,7 @@
 .CodeMirror-cursor {
   border-left: 2px solid #f44336 !important;
 }
+/* GUTTER */
 .CodeMirror-gutters {
   background-color: #eeeeee;
   border-right: none;
@@ -247,10 +267,6 @@
 }
 .CodeMirror .CodeMirror-focused .CodeMirror-activeline-background {
   background: #1a237e;
-}
-.CodeMirror .CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
-  background: rgba(0, 0, 0, 0.2);
-  color: #bdbdbd;
 }
 /*
 * CodeMirror-foldgutter-open:after : agrupar en icon |> off
@@ -322,45 +338,82 @@ Tabs
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
   border-radius: 0px;
-  border-bottom: 5px solid red;
+  border-bottom: 5px solid #e0e0e0;
   transition: none;
   opacity: 1;
   overflow: hidden;
 }
 .ext-documents .document:hover {
   transition: none;
-  border-bottom: 5px solid #ffd600;
+  border-bottom: 5px solid #00bfa5;
 }
 .ext-documents .document.selected {
-  color: #616161;
-  background: #ffeb3b;
+  font-family: 'Roboto Light', sans-serif;
+  color: #eeeeee;
+  background: #009688;
+  border-bottom: 5px solid #00bfa5;
   transition: none;
 }
 .ext-documents .document.changed {
   box-shadow: none;
   background: #ff5252;
+  border-bottom: 5px solid #ff1744;
   color: #eeeeee;
   transition: none;
 }
 .ext-documents .document-close {
-  color: #111;
-  transition: none;
   cursor: pointer;
+  color: #bdbdbd;
+  transition: none;
   opacity: 1;
   line-height: 1.5;
   text-align: center;
 }
 .ext-documents .document.selected .document-close {
-  color: #75daff;
+  color: #ff5252;
+  background: #ff5252;
+  border-radius: 50%;
+  border: 1px solid #ff1744;
+  transition: .3s;
+  margin: -2px;
+  padding: 0px;
+  display: inline-flex;
+  padding-left: 0.08rem;
+  padding-right: 0.08rem;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
+  box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.18), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
 }
 .ext-documents .document.changed .document-close {
-  color: #fff;
+  color: #ff1744;
+  background: #ff1744;
+  border-radius: 50%;
+  border: 1px solid #ff1744;
+  transition: .3s;
+  margin: -2px;
+  padding: 0px;
+  display: inline-flex;
+  padding-left: 0.08rem;
+  padding-right: 0.08rem;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
+  box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.18), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
 }
 .ext-documents .document-close:hover,
 .ext-documents .button-icon:hover {
-  color: #555;
-  opacity: 1;
+  color: #ff1744;
+  background: #ff1744;
+  border-radius: 50%;
+  border: 1px solid #ff1744;
   transition: none;
+  margin: -2px;
+  padding: 0px;
+  display: inline-flex;
+  padding-left: 0.08rem;
+  padding-right: 0.08rem;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
+  box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.18), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
 }
 /*.cm-m-javascript: JavaScript *********************************************************/
 /*.cm-m-clike: PHP *********************************************************************/
