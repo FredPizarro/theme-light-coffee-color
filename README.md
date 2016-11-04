@@ -38,6 +38,7 @@ Require Install "Documents Toolbar"
 git clone https://github.com/dnbard/brackets-documents-toolbar.git
 ```
 ![HTML](screenshots/brackets_n02.png)
+
 Repository : ( `https://github.com/dnbard` )
 
 
