@@ -325,8 +325,12 @@
 Tabs
 *Tab Selected
 */
+.view-pane {
+  background: #009688;
+  padding-top: 5px;
+}
 .ext-documents {
-  padding: 0 2px;
+  padding: 0 0;
   background: #eeeeee;
 }
 .ext-documents .document {
@@ -352,6 +356,7 @@ Tabs
   color: #eeeeee;
   background: #009688;
   border-bottom: 5px solid #00bfa5;
+  opacity: none;
   transition: none;
 }
 .ext-documents .document.changed {
@@ -360,6 +365,10 @@ Tabs
   border-bottom: 5px solid #ff1744;
   color: #eeeeee;
   transition: none;
+  font-size: 14px;
+}
+.ext-documents .documents-holder {
+  padding-top: 0px;
 }
 .ext-documents .document-close {
   cursor: pointer;
@@ -414,6 +423,11 @@ Tabs
   padding-top: 0.01rem;
   padding-bottom: 0.01rem;
   box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.18), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
+}
+.documents-toolbar_modal .buttons-set {
+  width: 200px;
+  text-align: center;
+  background: red;
 }
 /*.cm-m-javascript: JavaScript *********************************************************/
 /*.cm-m-clike: PHP *********************************************************************/

@@ -384,10 +384,16 @@
 Tabs
 *Tab Selected
 */
+.view-pane{
+    background: @teal-500; padding-top: 5px;
+}
+ 
 .ext-documents {
-    padding: 0 2px;
+    padding: 0 0;
     background: @grey-200;
 }
+
+
 .ext-documents .document {
     margin: 0px;    
     padding: 3px 2em 3px 12px;
@@ -402,6 +408,8 @@ Tabs
     opacity: 1;
     overflow: hidden;
 }
+
+
 .ext-documents .document:hover{
     transition: none;
     border-bottom: 5px solid @teal-A700;
@@ -412,6 +420,7 @@ Tabs
     color: @grey-200;
     background: @teal-500;
     border-bottom: 5px solid @teal-A700; 
+    opacity: none;
     transition: none;
 }
 .ext-documents .document.changed {
@@ -420,7 +429,15 @@ Tabs
     border-bottom: 5px solid @red-A400; 
     color: @grey-200;  
     transition: none;
+    font-size: 14px;
 }
+
+
+
+.ext-documents .documents-holder{
+    padding-top: 0px; 
+}
+
 .ext-documents .document-close {
   cursor: pointer;
   color: @grey-400;
@@ -429,6 +446,7 @@ Tabs
   line-height: 1.5;
   text-align: center;
 }
+
 .ext-documents .document.selected .document-close {
   color: @red-A200;
     background: @red-A200;
@@ -456,6 +474,7 @@ Tabs
     box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.18), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
 
 }
+
 .ext-documents .document-close:hover,
 .ext-documents .button-icon:hover {
     color: @red-A400;    
@@ -469,7 +488,11 @@ Tabs
     padding-top: 0.01rem; padding-bottom: 0.01rem;
     box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.18), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
 }
- 
+
+.documents-toolbar_modal .buttons-set{
+    width: 200px;
+    text-align: center; background: red;
+}
 
 
 
