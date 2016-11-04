@@ -30,6 +30,16 @@ As this location is under your user directory, the content is persisted across C
 #### view in javascript
 ![HTML](screenshots/theme-coffee-03.png)
 
+=======
+## Toolbar
+Require Install "Documents Toolbar" 
+
+```
+git clone https://github.com/dnbard/brackets-documents-toolbar.git
+```
+![HTML](screenshots/brackets_n02.png)
+Repository : ( `https://github.com/dnbard` )
+
 
 =======
 # Contact
