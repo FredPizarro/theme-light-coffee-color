@@ -59,13 +59,13 @@
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
 }
 /* PADDING */
+/* Vertical padding around (content) */
 .CodeMirror-lines {
   padding: 12px 0;
-  /* Vertical padding around (content) */
 }
 .CodeMirror pre {
   color: #424242;
-  /* {, : , ; */
+  /* {, : , punto y coma */
 }
 .CodeMirror-scrollbar-filler,
 .CodeMirror-gutter-filler {
@@ -430,6 +430,36 @@ Tabs
   background: red;
 }
 /*.cm-m-javascript: JavaScript *********************************************************/
+.cm-m-javascript.cm-variable {
+  color: #1a237e;
+  font-family: "Roboto Bold", sans-serif;
+  opacity: 0.7;
+}
+.cm-m-javascript.cm-string {
+  color: #ff1744;
+  font-family: "Roboto Bold", sans-serif;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.cm-m-javascript.cm-def {
+  color: #212121;
+  font-family: "Roboto Light", sans-serif;
+  border-bottom: 1px double #bdbdbd;
+  text-shadow: 0 0 1px #ffffff,
+            0 0 2px #ffffff,
+            0 0 3px #ffffff,
+            0 0 4px #fff,
+            0 0 7px #fff,
+            0 0 8px #fff,
+            0 0 10px #fff,
+            0 0 75px #fff;
+}
+.cm-m-javascript.cm-property {
+  color: #d84315;
+  font-family: "Roboto Black";
+  font-style: italic;
+  opacity: 0.5;
+}
 /*.cm-m-clike: PHP *********************************************************************/
 .cm-m-clike.cm-variable {
   color: #bdbdbd;

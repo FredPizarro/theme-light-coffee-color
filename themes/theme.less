@@ -19,7 +19,8 @@
 @red-50:#ffebee;
 @red-100:#ffcdd2;
 @red-500: #f44336;
-
+@red-900: #b71c1c;
+    
 /* ACCENTS */
 @red-A200: #ff5252;
 @red-A400: #ff1744;
@@ -118,11 +119,12 @@
 
 
 /* PADDING */
+/* Vertical padding around (content) */
 .CodeMirror-lines {
-  padding: 12px 0; /* Vertical padding around (content) */
+  padding: 12px 0;
 }
 .CodeMirror pre {
-    color: @grey-800; /* {, : , ; */
+    color: @grey-800; /* {, : , punto y coma */
 }
 .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
   background-color: @grey-300; /* The little square between H and V scrollbars */  
@@ -497,7 +499,32 @@ Tabs
 
 
 /*.cm-m-javascript: JavaScript *********************************************************/
-
+.cm-m-javascript.cm-variable {
+    color: @indigo-900; font-family: "Roboto Bold",sans-serif;
+    opacity: 0.7;
+}
+.cm-m-javascript.cm-string {
+    color: @red-A400; font-family: "Roboto Bold",sans-serif;
+    font-size: 16px;
+    opacity: 0.7;
+}
+.cm-m-javascript.cm-def {
+	color: @grey-900; font-family: "Roboto Light", sans-serif;
+    border-bottom: 1px double  @foreground;
+    text-shadow:
+            0 0 1px #ffffff,
+            0 0 2px #ffffff,
+            0 0 3px #ffffff,
+            0 0 4px #fff,
+            0 0 7px #fff,
+            0 0 8px #fff,
+            0 0 10px #fff,
+            0 0 75px #fff;
+}
+.cm-m-javascript.cm-property {
+	color: @deepOrange-800; font-family: "Roboto Black"; font-style: italic;
+    opacity: 0.5;
+}
 /*.cm-m-clike: PHP *********************************************************************/
 .cm-m-clike.cm-variable { color: @grey-400;}
 .cm-m-clike.cm-variable-2 { color: @deepOrange-800;}
