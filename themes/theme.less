@@ -6,7 +6,6 @@
 
 /* Color Material */
 @blueGrey-900: #263238;
-@indigo-900: #1a237e;
 @lightGreen-900: #33691e;
 @grey-200: #EEEEEE;
 @grey-300: #e0e0e0;
@@ -20,6 +19,12 @@
 @red-100:#ffcdd2;
 @red-500: #f44336;
 @red-900: #b71c1c;
+@indigo-200: #9fa8da;
+@indigo-400: #5c6bc0;
+@indigo-500: #3f51b5;
+@indigo-600: #3949ab;
+@indigo-700: #303f9f;
+@indigo-900: #1a237e;
     
 /* ACCENTS */
 @red-A200: #ff5252;
@@ -28,6 +33,8 @@
 @lightGreen-A400: #76ff03;
 @yellow-A200: #FFFF8D;
 @yellow-A700: #ffd600;
+@indigo-A200: #536dfe;
+@indigo-A700: #304ffe;
 @teal-A200: #64ffda;
 @teal-A700: #00bfa5;
 
@@ -176,6 +183,7 @@
 *(def,property: css properties color: etc)
 *(comentario )
 ** various
+* keyword (valores por default, "function", var,  )
 */
 .cm-atom, .cm-string, .cm-string-2, .cm-hr { color: @deepOrange-400; text-shadow: @txt-shadown; }
 .cm-attribute, .cm-plus { color: @deepOrange-700;text-shadow: @txt-shadown; }
@@ -221,10 +229,12 @@
 }
 .cm-error, .cm-minus { color: @red-A400; }
 .cm-rangeinfo { color: @deepPurple-400;}
-.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {
+ .cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {
     color: @teal-600;
     text-shadow: @txt-shadown;
+     
 }
+    .cm-keyword { font-family: "Roboto Bold", sans-serif; font-size: 16px;}
 
 
 /*
@@ -427,7 +437,10 @@ Tabs
 
 .ext-documents .document:hover{
     transition: none;
+    color: @grey-200;
     border-bottom: 5px solid @teal-A700;
+    background: @teal-500; transition: box-shadow 0.25s;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 .ext-documents .document.selected {
@@ -440,9 +453,10 @@ Tabs
 }
 .ext-documents .document.changed {
     box-shadow: none;
-    background: @red-A200; 
+    background: @red-A200;
     border-bottom: 5px solid @red-A400; 
-    color: @grey-200;  
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    color: @grey-200;   
     transition: none;
     font-size: 14px;
 }
@@ -450,7 +464,7 @@ Tabs
 
 
 .ext-documents .documents-holder{
-    padding-top: 0px; 
+    padding-top: 0px;
 }
 
 .ext-documents .document-close {
@@ -506,9 +520,20 @@ Tabs
 
 .documents-toolbar_modal .buttons-set{
     width: 200px;
-    text-align: center; background: red;
+    text-align: center;
 }
 
+
+
+
+
+/*.cm-m-xml: HTML *********************************************************/
+.cm-m-xml.cm-attribute { font-family: "Roboto Regular",monospace; }
+.cm-m-xml.cm-string {  font-style: italic; }
+
+ 
+
+/*.cm-m-css: CSS *********************************************************/
 
 
 /*.cm-m-javascript: JavaScript *********************************************************/
@@ -518,6 +543,7 @@ Tabs
 }
 .cm-m-javascript.cm-keyword{
     color: @teal-600; font-family: "Roboto Black";
+    font-size: 15px;
 }
 .cm-m-javascript.cm-string {
     color: @red-A400; font-family: "Roboto Bold",sans-serif;
@@ -541,7 +567,34 @@ Tabs
 	color: @deepOrange-800; font-family: "Roboto Black"; font-style: italic;
     opacity: 0.5;
 }
+
+
 /*.cm-m-clike: PHP *********************************************************************/
-.cm-m-clike.cm-variable { color: @grey-400;}
-.cm-m-clike.cm-variable-2 { color: @deepOrange-800;}
-.cm-m-clike.cm-operator { color: @grey-500;}
+.cm-meta, .cm-m-clike.cm-meta { color: @grey-500; font-family: "Roboto Black", sans-serif; }
+.cm-m-clike.cm-keyword {
+    color: @indigo-400; font-family: "Roboto Black";
+    font-size: 15px; 
+}
+.cm-m-clike.cm-string{ 
+    color: @red-A400; font-family: "Roboto Bold",sans-serif;
+    font-size: 16px;
+    opacity: 0.7;
+}
+.cm-m-clike.cm-comment { color: @grey-500; font-family: "Roboto Light", sans-serif; font-style: italic; }
+.cm-m-clike.cm-variable { color: @deepOrange-700;}
+.cm-m-clike.cm-variable-2 { 
+    color: @grey-900; font-family: "Roboto Light", sans-serif;
+    border-bottom: 1px double  @foreground;
+    text-shadow:
+            0 0 1px #ffffff,
+            0 0 2px #ffffff,
+            0 0 3px #ffffff,
+            0 0 4px #fff,
+            0 0 7px #fff,
+            0 0 8px #fff,
+            0 0 10px #fff,
+            0 0 75px #fff;
+}
+.cm-m-clike.cm-operator { color: @grey-900; font-size: 16px; }
+
+
