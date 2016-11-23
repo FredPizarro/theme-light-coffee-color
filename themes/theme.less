@@ -177,12 +177,17 @@
 *(comentario )
 ** various
 */
-.cm-atom, .cm-string, .cm-string-2, .cm-hr {
-    color: @deepOrange-400;
-    text-shadow: @txt-shadown;
-}
-.cm-attribute, .cm-plus { color: @deepOrange-700;text-shadow: @txt-shadown;}
-.cm-strong { color: @yellow-500; }
+.cm-atom, .cm-string, .cm-string-2, .cm-hr { color: @deepOrange-400; text-shadow: @txt-shadown; }
+.cm-attribute, .cm-plus { color: @deepOrange-700;text-shadow: @txt-shadown; }
+.cm-strong { color: @yellow-500; font-family: "Roboto Bold", sans-serif;
+    text-shadow: 0 0 1px #e0e0e0,
+            0 0 2px #757575,
+            0 0 3px #757575,
+            0 0 4px #fff,
+            0 0 7px #fff,
+            0 0 8px #fff,
+            0 0 10px #fff,
+            0 0 75px #fff;;  }
 .cm-em { color: @yellow-500; }
 .cm-number {
     color: @grey-900;
@@ -201,11 +206,19 @@
 .cm-variable, .cm-operator, .cm-meta, .cm-bracket { color: @grey-500; }
 .cm-variable-2 { color: @grey-600;}
 .cm-variable-3 { color: @grey-400;}
-.cm-comment { color: @grey-500;font-family: 'Open Sans', sans-serif; font-style: italic;
-    
-}
+.cm-comment { color: @grey-500; font-family: "Roboto Light", sans-serif; font-style: italic; }
 .cm-header { color: @purple-300;}
-.cm-link { color: @yellow-500; text-decoration: none; }
+.cm-link { color: @deepOrange-500; text-decoration: none; font-family: "Roboto Black", sans-serif;
+            text-shadow:
+            0 0 1px #eeeeee,
+            0 0 1px #eeeeee,
+           0 0 2px #eeeeee,
+           0 0 3px #eeeeee,
+           0 0 2px #eeeeee,
+           0 0 6px #eeeeee,
+            0 0 10px #e0e0e0,
+            0 0 75px #e0e0e0;
+}
 .cm-error, .cm-minus { color: @red-A400; }
 .cm-rangeinfo { color: @deepPurple-400;}
 .cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {
@@ -502,6 +515,9 @@ Tabs
 .cm-m-javascript.cm-variable {
     color: @indigo-900; font-family: "Roboto Bold",sans-serif;
     opacity: 0.7;
+}
+.cm-m-javascript.cm-keyword{
+    color: @teal-600; font-family: "Roboto Black";
 }
 .cm-m-javascript.cm-string {
     color: @red-A400; font-family: "Roboto Bold",sans-serif;
