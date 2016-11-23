@@ -72,6 +72,10 @@
   background-color: #e0e0e0;
   /* The little square between H and V scrollbars */
 }
+.CodeMirror-vscrollbar,
+.CodeMirror-hscrollbar {
+  background-color: #e0e0e0;
+}
 #editor-holder .CodeMirror,
 #editor-holder .CodeMirror-scroll {
   background-color: #f5f5f5;
@@ -253,6 +257,10 @@
   background: #212121;
   border-bottom-left-radius: 3px;
 }
+/**** selection ventanas propia ***/
+.CodeMirror-linebackground {
+  background: #ff1744;
+}
 /*****  seleccion de corchetes ***************************************/
 .CodeMirror-matchingbracket,
 .CodeMirror-matchingtag {
@@ -291,6 +299,7 @@
 .CodeMirror .CodeMirror-focused .CodeMirror-activeline-background {
   background: #1a237e;
 }
+/*Panel Code*/
 /*
 * CodeMirror-foldgutter-open:after : agrupar en icon |> off
 *CodeMirror-foldgutter-folded:after : |> on
@@ -456,13 +465,14 @@ Tabs
   width: 200px;
   text-align: center;
 }
-/*.cm-m-xml: HTML *********************************************************/
+/*.cm-m-xml: HTML, XML *********************************************************/
 .cm-m-xml.cm-attribute {
   font-family: "Roboto Regular", monospace;
 }
 .cm-m-xml.cm-string {
   font-style: italic;
 }
+/*.cm-m-css: CSS *********************************************************/
 /*.cm-m-javascript: JavaScript *********************************************************/
 .cm-m-javascript.cm-variable {
   color: #1a237e;
@@ -505,9 +515,21 @@ Tabs
   color: #9e9e9e;
   font-family: "Roboto Black", sans-serif;
 }
-.cm-m-clike {
-  color: #3f51b5;
-  font-family: "Roboto Bold", monospace;
+.cm-m-clike.cm-keyword {
+  color: #5c6bc0;
+  font-family: "Roboto Black";
+  font-size: 15px;
+}
+.cm-m-clike.cm-string {
+  color: #ff1744;
+  font-family: "Roboto Bold", sans-serif;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.cm-m-clike.cm-comment {
+  color: #9e9e9e;
+  font-family: "Roboto Light", sans-serif;
+  font-style: italic;
 }
 .cm-m-clike.cm-variable {
   color: #e64a19;
@@ -526,7 +548,6 @@ Tabs
             0 0 75px #fff;
 }
 .cm-m-clike.cm-operator {
-  color: #00897b;
-  font-family: "Roboto Black";
+  color: #212121;
   font-size: 16px;
 }

@@ -136,6 +136,10 @@
 .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
   background-color: @grey-300; /* The little square between H and V scrollbars */  
 }
+.CodeMirror-vscrollbar,.CodeMirror-hscrollbar { 
+   background-color: @grey-300; 
+}
+
 
 
 
@@ -275,6 +279,7 @@
 }
 
 
+
 /* Selección de texto 1 o más / off **/
 .CodeMirror .CodeMirror-selected {
     background: @yellow-500;
@@ -285,6 +290,11 @@
     background: @grey-900;
     border-bottom-left-radius: 3px;
 }
+/**** selection ventanas propia ***/
+.CodeMirror-linebackground {
+  background: @red-A400;
+}
+
 
 
 /*****  seleccion de corchetes ***************************************/
@@ -303,8 +313,6 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     
 }
-
-
 
 
 .CodeMirror-overwrite .CodeMirror-cursor {
@@ -332,8 +340,9 @@
     }
 }
 
-
-
+/*Panel Code*/
+.CodeMirror-sizer {  }
+.CodeMirror-code {  }
 /*
 * CodeMirror-foldgutter-open:after : agrupar en icon |> off
 *CodeMirror-foldgutter-folded:after : |> on
@@ -527,7 +536,8 @@ Tabs
 
 
 
-/*.cm-m-xml: HTML *********************************************************/
+
+/*.cm-m-xml: HTML, XML *********************************************************/
 .cm-m-xml.cm-attribute { font-family: "Roboto Regular",monospace; }
 .cm-m-xml.cm-string {  font-style: italic; }
 
