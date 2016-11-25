@@ -19,12 +19,23 @@
 @red-100:#ffcdd2;
 @red-500: #f44336;
 @red-900: #b71c1c;
+@deepOrange-50: #fbe9e7;
+@deepOrange-200: #ffab91;
+@deepOrange-300: #ff8a65;
+@deepOrange-400: #ff7043;
+@deepOrange-500: #ff5722;
+@deepOrange-600: #f4511e;
+@deepOrange-700: #e64a19;
+@deepOrange-800: #d84315;
 @indigo-200: #9fa8da;
 @indigo-400: #5c6bc0;
 @indigo-500: #3f51b5;
 @indigo-600: #3949ab;
 @indigo-700: #303f9f;
 @indigo-900: #1a237e;
+@teal-50: #e0f2f1;
+@teal-500: #009688;
+@teal-600: #00897b;
     
 /* ACCENTS */
 @red-A200: #ff5252;
@@ -43,17 +54,6 @@
 @yellow-500: #ffeb3b;
 @purple-300: #ba68c8;
 @deepPurple-400: #7e57c2;
-@teal-50: #e0f2f1;
-@teal-500: #009688;
-@teal-600: #00897b;
-@deepOrange-50: #fbe9e7;
-@deepOrange-200: #ffab91;
-@deepOrange-300: #ff8a65;
-@deepOrange-400: #ff7043;
-@deepOrange-500: #ff5722;
-@deepOrange-600: #f4511e;
-@deepOrange-700: #e64a19;
-@deepOrange-800: #d84315;
 @white: #ffffff;
 @black: #000000;
 
@@ -278,7 +278,18 @@
     font-family: 'Roboto Bold', sans-serif;
 }
 
-
+//desplazar linea
+#minimap-slider {
+    background-color: @teal-500;
+    width: 100%;
+    border-left: 5px solid @teal-A700; 
+    position: absolute;
+    opacity: 0.3;
+}
+#minimap-slider:hover{
+    opacity: 0.9;
+    transition: 250ms;
+}
 
 /* Selección de texto 1 o más / off **/
 .CodeMirror .CodeMirror-selected {
@@ -339,6 +350,7 @@
         background: @indigo-900;
     }
 }
+
 
 /*Panel Code*/
 .CodeMirror-sizer {  }
@@ -531,6 +543,8 @@ Tabs
     width: 200px;
     text-align: center;
 }
+
+
 
 
 
