@@ -47,7 +47,9 @@
 @red-500: #f44336;
 @red-900: #b71c1c;
 @teal-50: #e0f2f1;
+@teal-100: #B2DFDB;
 @teal-200: #80CBC4;
+@teal-300: #4DB6AC;
 @teal-500: #009688;
 @teal-600: #00897b;
 @teal-900: #004d40;
@@ -83,10 +85,10 @@
 * C:\Program Files (x86)\Brackets\www\thirdparty\CodeMirror  
 * C:\Program Files (x86)\Brackets\www\thirdparty\CodeMirror\lib
 */
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-
-
+//
+//@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+//
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 @font-face {
   font-family: "Roboto Thin";
@@ -117,13 +119,15 @@
   font-weight: 500;
 }
 
+
 @font-face {
   font-family: "Roboto Bold";
   src: local(Roboto Bold), url("../fonts/roboto/Roboto-Bold.eot");
   src: url("../fonts/roboto/Roboto-Bold.eot");
-  src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
 }
+
 
 @font-face {
   font-family: "Roboto Black";
@@ -181,7 +185,7 @@
 
 
 .CodeMirror-focused .CodeMirror-activeline-background {
-    background: @red-50;
+    background: @teal-300; opacity: 0.1;
     border-left: 2px solid @red-A400;
 }
 
@@ -192,7 +196,7 @@
 /* Seleccion linea (numeros) */
 .CodeMirror-focused .CodeMirror-activeline {
     .CodeMirror-gutter-elt {
-        background: @red-100;
+        background: @teal-50;
         color: @grey-700;
         font-family: 'Roboto Black',sans-serif;
         font-size: 100%; 
@@ -201,6 +205,7 @@
     .inline-widget .CodeMirror-gutter-elt {
         color: @grey-800;
     }
+    
 }
 
  
@@ -214,7 +219,7 @@
 .cm-atom, .cm-string, .cm-string-2, .cm-hr { color: @deepOrange-400; text-shadow: @txt-shadown; }
 .cm-attribute, .cm-plus { color: @deepOrange-700;text-shadow: @txt-shadown; font-size: 15px; }
 
-.cm-strong { color: @yellow-500; font-family: "Roboto Bold", sans-serif;
+.cm-strong { color: @yellow-500; font-family: 'Roboto Bold', sans-serif;
     text-shadow: 0 0 1px #e0e0e0,
             0 0 2px #757575,
             0 0 3px #757575,
@@ -236,13 +241,14 @@
             0 0 10px #fff,
             0 0 75px #fff;
 }
-.cm-def, .cm-property { color: @deepOrange-800; }
+//.cm-def, .cm-property { color: @deepOrange-800; }
+.cm-def, .cm-property { color: #00C853; opacity: 1; font-family: "Roboto"; font-weight: 500;  }
 .cm-variable, .cm-operator, .cm-meta, .cm-bracket { color: @grey-500; }
 .cm-variable-2 { color: @grey-600;}
 .cm-variable-3 { color: @grey-400;}
-.cm-comment { color: @grey-500; font-family: "Roboto Light", sans-serif; font-style: italic; }
+.cm-comment { color: @grey-500; font-family: "Roboto", sans-serif; font-style: italic; font-weight: 300; opacity: 0.7; }
 .cm-header { color: @purple-300;}
-.cm-link { color: @deepOrange-500; text-decoration: none; font-family: "Roboto Black", sans-serif;
+.cm-link { color: @deepOrange-500; text-decoration: none; font-family: 'Roboto Black', sans-serif;
             text-shadow:
             0 0 1px #eeeeee,
             0 0 1px #eeeeee,
@@ -254,14 +260,14 @@
             0 0 75px #e0e0e0;
 }
 .cm-error, .cm-minus {
-    color: @red-A400 !important; text-decoration:line-through;}
+    color: @red-A400 !important; text-decoration:none;}
 .cm-rangeinfo { color: @deepPurple-400;}
  .cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {
     color: @teal-600;
     text-shadow: @txt-shadown;
      
 }
-    .cm-keyword { font-family: "Roboto Bold", sans-serif; font-size: 16px;}
+    .cm-keyword { font-family: 'Roboto Bold', sans-serif; font-size: 16px;}
 
 /*
 * extra css
@@ -324,10 +330,7 @@
     border-bottom-left-radius: 3px;
     box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2)
 }
-/**** selection ventanas propia ***/
-.CodeMirror-linebackground {
-  background: @red-A400;
-}
+
 
 
 @keyframes caffee-bean {
@@ -343,6 +346,12 @@
     100%{
         background-color: @brown-500;
     }
+}
+
+/**** selection ventanas propia ***/
+.CodeMirror-linebackground {
+  background: @red-A200;
+    
 }
 
 /*****  seleccion de corchetes (tags) ***************************************/
@@ -596,15 +605,18 @@ Tabs
 
 
 
-
-
-
-
 /*.cm-m-xml: HTML, XML *********************************************************/
-.cm-m-xml.cm-attribute { font-family: "Roboto Regular",monospace; }
+.cm-m-xml.cm-attribute { font-family: 'Roboto Regular',monospace; }
 .cm-m-xml.cm-string {  font-style: italic; }
 .cm-m-xml.cm-error {
-	border: 2px solid @red-A400;
+	text-decoration: line-through;
+}
+.cm-m-xml.cm-error::before, .cm-m-xml.cm-error::after {
+	content: "*"; font-size: 10px;
+//    background: @red-500;  color: @red-500;
+    border-radius: 50%; 
+    position: absolute;
+    bottom: 6px; left: 0px;
 }
 .cm-m-xml.CodeMirror-matchingtag {
     border-bottom: 2px solid @red-A400;
@@ -618,11 +630,11 @@ Tabs
 /*.cm-m-javascript: JavaScript *********************************************************/
 .cm-m-javascript.cm-atom{
     
-     font-family: "Roboto medium", monospace; font-size: 16px;
+     font-family: 'Roboto medium', monospace; font-size: 16px;
     opacity: 0.8;
 }
 .cm-m-javascript.cm-string {
-    color: @red-A400; font-family: "Roboto Bold",sans-serif;
+    color: @red-A400; font-family: 'Roboto Bold',sans-serif;
     font-size: 16px;
     opacity: 0.9;
 }
@@ -639,19 +651,19 @@ Tabs
             0 0 75px #000;
 }
 .cm-m-javascript.cm-variable {
-    color: @yellow-A700;  font-family: "Roboto Bold",sans-serif;
+    color: @yellow-A700;  font-family: 'Roboto Bold',sans-serif;
     font-size: 16px;
 }
 .cm-m-javascript.cm-variable-2 {
-    color: @grey-900; font-family: "Roboto Bold", sans-serif;
+    color: @grey-900; font-family: 'Roboto Bold', sans-serif;
     opacity: 0.8;
 }
 .cm-m-javascript.cm-keyword{
-    color: @teal-500; font-family: "Roboto Black";
+    color: @teal-500; font-family: 'Roboto Black';
     font-size: 15px;
 }
 .cm-m-javascript.cm-def {
-	color: @grey-900; font-family: "Roboto Light", sans-serif;
+	color: @grey-900; font-family: 'Roboto Light', sans-serif;
     border-bottom: 1px double  @foreground;
     text-shadow:
             0 0 1px #ffffff,
@@ -664,7 +676,7 @@ Tabs
             0 0 75px #fff;
 }
 .cm-m-javascript.cm-property {
-	color: @deepOrange-A400; font-family: "Roboto Black"; font-style: italic;
+	color: @deepOrange-A400; font-family: 'Roboto Black'; font-style: italic;
     opacity: 0.7;
 }
 
@@ -675,25 +687,25 @@ Tabs
 .cm-m-clike.cm-builtin {
   color: @deepOrange-300; }
 .cm-m-clike.cm-def {
-  color: @grey-800; font-family: "Roboto Light", sans-serif;
+  color: @grey-800; font-family: 'Roboto Light', sans-serif;
     border-bottom: 1px double  @foreground;
     
 }
 
-.cm-meta, .cm-m-clike.cm-meta { color: @grey-500; font-family: "Roboto Black", sans-serif; }
+.cm-meta, .cm-m-clike.cm-meta { color: @grey-500; font-family: 'Roboto Black', sans-serif; }
 .cm-m-clike.cm-keyword {
-    color: @indigo-400; font-family: "Roboto Black";
+    color: @indigo-400; font-family: 'Roboto Black';
     font-size: 15px; 
 }
 .cm-m-clike.cm-string{ 
-    color: @red-A400; font-family: "Roboto Bold",sans-serif;
+    color: @red-A400; font-family: 'Roboto Bold',sans-serif;
     font-size: 16px;
     opacity: 0.7;
 }
-.cm-m-clike.cm-comment { color: @grey-500; font-family: "Roboto Light", sans-serif; font-style: italic; }
+.cm-m-clike.cm-comment { color: @grey-500; font-family: 'Roboto Light', sans-serif; font-style: italic; }
 .cm-m-clike.cm-variable { color: @deepOrange-700;}
 .cm-m-clike.cm-variable-2 { 
-    color: @grey-900; font-family: "Roboto Light", sans-serif;
+    color: @grey-900; font-family: 'Roboto Light', sans-serif;
     
     text-shadow:
             0 0 1px #ffffff,
