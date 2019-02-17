@@ -1,3 +1,5 @@
+
+
 // COLOR PALETTE
 @background: #F5F5F5;
 @foreground: #bdbdbd;
@@ -20,6 +22,8 @@
 @deepOrange-600: #f4511e;
 @deepOrange-700: #e64a19;
 @deepOrange-800: #d84315;
+@deepOrange-900: #BF360C;
+
 @deepPurple-400: #7e57c2;
 @green-100: #C8E6C9;
 @green-300: #81C784;
@@ -90,11 +94,19 @@
 //
 //@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+/* Fonts: Roboto */
 @font-face {
   font-family: "Roboto Thin";
   src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.eot");
   src: url("../fonts/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
-  font-weight: 100;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Light), url("../fonts/roboto/Roboto-Light.eot");
+  src: url("../fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/roboto/Roboto-Light.woff") format("woff"), url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
 }
 
 @font-face {
@@ -113,28 +125,16 @@
 
 @font-face {
   font-family: "Roboto Medium";
-  src: local(Robot Medium), url("../fonts/roboto/Roboto-Medium.eot");
   src: url("../fonts/roboto/Roboto-Medium.eot");
   src: url("../fonts/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
-
 @font-face {
   font-family: "Roboto Bold";
-  src: local(Roboto Bold), url("../fonts/roboto/Roboto-Bold.eot");
   src: url("../fonts/roboto/Roboto-Bold.eot");
-  src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
-}
-
-
-@font-face {
-  font-family: "Roboto Black";
-  src: local(Roboto Black), url("../fonts/roboto/Roboto-Black.eot");
-  src: url("../fonts/roboto/Roboto-Black.eot");
-  src: url("../fonts/roboto/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Black.woff") format("woff"), url("../fonts/roboto/Roboto-Black.ttf") format("truetype");
-  font-weight: 900;
 }
 
 
@@ -164,7 +164,7 @@
 .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
   background-color: @grey-300; /* The little square between H and V scrollbars */  
 }
-.CodeMirror-vscrollbar,.CodeMirror-hscrollbar { 
+.CodeMirror-vscrollbar,.CodeMirror-hscrollbar {
    background-color: @grey-300; 
 }
 
@@ -242,7 +242,7 @@
             0 0 75px #fff;
 }
 //.cm-def, .cm-property { color: @deepOrange-800; }
-.cm-def, .cm-property { color: #00C853; opacity: 1; font-family: "Roboto"; font-weight: 500;  }
+.cm-def, .cm-property { color: @green-A700; opacity: 1; font-family: "Roboto medium", monospace; font-weight: 500;  }
 .cm-variable, .cm-operator, .cm-meta, .cm-bracket { color: @grey-500; }
 .cm-variable-2 { color: @grey-600;}
 .cm-variable-3 { color: @grey-400;}
@@ -264,7 +264,7 @@
 .cm-rangeinfo { color: @deepPurple-400;}
  .cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {
     color: @teal-600;
-    text-shadow: @txt-shadown;
+    text-shadow: @txt-shadown; 
      
 }
     .cm-keyword { font-family: 'Roboto Bold', sans-serif; font-size: 16px;}
@@ -328,7 +328,7 @@
 .CodeMirror-focused .CodeMirror-selected{
     background: @black;
     border-bottom-left-radius: 3px;
-    box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2)
+    box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 
@@ -628,6 +628,8 @@ Tabs
 
 
 /*.cm-m-javascript: JavaScript *********************************************************/
+/* puntos y [ ] */
+
 .cm-m-javascript.cm-atom{
     
      font-family: 'Roboto medium', monospace; font-size: 16px;
@@ -651,8 +653,20 @@ Tabs
             0 0 75px #000;
 }
 .cm-m-javascript.cm-variable {
-    color: @yellow-A700;  font-family: 'Roboto Bold',sans-serif;
+	 color: #A1887F; opacity: 1; 
+	 font-family: 'Roboto Medium',monospace;
+	 font-weight: 500;
+	
     font-size: 16px;
+    text-shadow:
+            0 0 1px #D7CCC8,
+            0 0 2px #fff,
+            0 0 3px #fff,
+            0 0 4px #fff,
+            0 0 7px #fff,
+            0 0 8px #fff,
+            1px 0 5px #fff,
+            2px 0 5px #D7CCC8;
 }
 .cm-m-javascript.cm-variable-2 {
     color: @grey-900; font-family: 'Roboto Bold', sans-serif;
